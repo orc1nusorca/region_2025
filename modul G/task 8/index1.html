@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Клавиатура</title>
+</head>
+<body>
+    <textarea name="texe" id="textArea" readonly></textarea>
+    <div class="key">й</div>
+    <div class="key">ц</div>
+    <div class="key">у</div>
+    <div class="key">к</div>
+    <div class="key">е</div>
+    <div class="key">н</div>
+    <div class="key">г</div>
+    <div class="key">ш</div>
+    <div class="key">щ</div>
+    <div class="key">з</div>
+    <div class="key">х</div>
+    <div class="key">ъ</div>
+    <div class="key">ф</div>
+    <div class="key">ы</div>
+    <div class="key">в</div>
+    <div class="key">а</div>
+    <div class="key">п</div>
+    <div class="key">р</div>
+    <div class="key">о</div>
+    <div class="key">л</div>
+    <div class="key">д</div>
+    <div class="key">ж</div>
+    <div class="key">э</div>
+    <div class="key">я</div>
+    <div class="key">ч</div>
+    <div class="key">с</div>
+    <div class="key">м</div>
+    <div class="key">и</div>
+    <div class="key">т</div>
+    <div class="key">ь</div>
+    <div class="key">б</div>
+    <div class="key">ю</div>
+    <div class="key" onclick="addChar('ё')">ё</div>
+    <div class="key" onclick="shiftToggle()">shift</div>
+    <div class="key" onclick="addChar(' ')">space</div>
+    <script>
+        let isShifted = false;
+        function shiftToggle() {
+            isShifted=!isShifted;
+            const keys = document.querySelectorAll('.key');
+            keys.forEach(key => {
+                const origChar = key.innerText;
+                if (isShifted) {
+                    key.innerText = origChar.toUpperCase();
+                } else {
+                    key.innerText = origChar.toLowerCase();
+                }
+            });
+        }
+        function addChar (char) {
+            const area = document.getElementById('textArea');
+            if (isShifted) {
+                char = char.toUpperCase();
+            } 
+            area.value += char;
+        }
+    </script>
+</body>
+</html>

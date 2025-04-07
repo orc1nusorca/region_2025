@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рисование</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+        }
+        #canvas {
+            width: 600px;
+            height: 600px;
+            border: 2px solid black;
+        }
+        #red {
+            background-color: red;
+        }
+        #green {
+            background-color: green;
+        }
+        #blue {
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    <div id="red" onclick="setColor('red')"></div>
+    <div id="green" onclick="setColor('green')"></div>
+    <div id="blue" onclick="setColor('blue')"></div>
+    <script>
+        let isDrawing = false;
+        let currentColor = 'red';
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        function setColor (color) {
+            currentColor = color;
+        }
+        canvas.addEventListener('mousedown', (e) => {
+            isDrawing=true;
+            ctx.beginPath();
+            ctx.moveTo(e.offsetX, e.offsetY);
+        });
+        canvas.addEventListener('mousemove', (e) => {
+            if (!isDrawing) return;
+            ctx.strokeStyle = currentColor;
+            ctx.strokeWidth = 2;
+            ctx.lineCap = 'round';
+            ctx.lineTo(e.offsetX, e.offsetY);
+            ctx.stroke();
+        });
+        canvas.addEventListener('mouseout', (e) => {
+            isDrawing = false;
+            ctx.closePath();
+        });
+        canvas.addEventListener('mouseup', (e) => {
+            isDrawing = false;
+            ctx.closePath();
+        });
+    </script>
+</body>
+</html>

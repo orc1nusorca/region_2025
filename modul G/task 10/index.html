@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Analog Clock</title>
+<style>
+  #clockContainer {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background-image: url('clock.png'); /* Укажите правильный путь к вашему clock.png */
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 50px auto;
+  }
+
+  #hour, #minute, #second {
+    position: absolute;
+    transform-origin: bottom center; /* Центр вращения */
+    background-color: black; /* Цвет стрелок */
+    border-radius: 5px; /* Скругление углов */
+  }
+
+  #hour {
+    width: 6px;
+    height: 70px;
+    top: 80px; /* Позиционирование относительно контейнера */
+    left: 147px; /* Позиционирование относительно контейнера */
+    opacity: 0.8;
+  }
+
+  #minute {
+    width: 4px;
+    height: 100px;
+    top: 50px; /* Позиционирование относительно контейнера */
+    left: 148px; /* Позиционирование относительно контейнера */
+    opacity: 0.8;
+  }
+
+  #second {
+    width: 2px;
+    height: 120px;
+    top: 30px; /* Позиционирование относительно контейнера */
+    left: 149px; /* Позиционирование относительно контейнера */
+    background-color: red; /* Красная секундная стрелка */
+    opacity: 0.8;
+  }
+</style>
+</head>
+<body>
+
+<div id="clockContainer">
+  <div id="hour"></div>
+  <div id="minute"></div>
+  <div id="second"></div>
+</div>
+
+<script>
+  function updateClock() {
+    let now = new Date();
+    let hours = now.getHours();
+    let minutes = now.getMinutes();
+    let seconds = now.getSeconds();
+
+    let hourRotation = 30 * hours + minutes / 2; // 30 градусов на час + поправка от минут
+    let minuteRotation = 6 * minutes; // 6 градусов на минуту
+    let secondRotation = 6 * seconds; // 6 градусов на секунду
+
+    document.getElementById("hour").style.transform = `rotate(${hourRotation}deg)`;
+    document.getElementById("minute").style.transform = `rotate(${minuteRotation}deg)`;
+    document.getElementById("second").style.transform = `rotate(${secondRotation}deg)`;
+  }
+
+  setInterval(updateClock, 1000); // Обновлять каждую секунду
+</script>
+
+</body>
+</html>

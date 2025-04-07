@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RGB Color Generator</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .color-preview {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 20px;
+            border: 1px solid #ccc;
+        }
+
+        .sliders {
+            margin-bottom: 15px;
+        }
+
+        .slider-group {
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slider-group label {
+            margin-right: 10px;
+        }
+
+        .slider-group input {
+            width: 150px;
+        }
+        .rgb-code{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="color-preview" id="colorPreview"></div>
+        <div class="sliders">
+            <div class="slider-group">
+                <label for="red">Red:</label>
+                <input type="range" id="red" min="0" max="255" value="0">
+                <span id="redValue">0</span>
+            </div>
+            <div class="slider-group">
+                <label for="green">Green:</label>
+                <input type="range" id="green" min="0" max="255" value="0">
+                <span id="greenValue">0</span>
+            </div>
+            <div class="slider-group">
+                <label for="blue">Blue:</label>
+                <input type="range" id="blue" min="0" max="255" value="0">
+                <span id="blueValue">0</span>
+            </div>
+        </div>
+        <div class="rgb-code">
+            <p>RGB Code: <span id="rgbCode">rgb(0, 0, 0)</span></p>
+        </div>
+    </div>
+    <script>
+        const redSlider = document.getElementById('red');
+        const greenSlider = document.getElementById('green');
+        const blueSlider = document.getElementById('blue');
+        const colorPreview = document.getElementById('colorPreview');
+        const redValueSpan = document.getElementById('redValue');
+        const greenValueSpan = document.getElementById('greenValue');
+        const blueValueSpan = document.getElementById('blueValue');
+        const rgbCodeSpan = document.getElementById('rgbCode');
+
+
+        function updateColor() {
+            const red = redSlider.value;
+            const green = greenSlider.value;
+            const blue = blueSlider.value;
+
+            colorPreview.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+            redValueSpan.textContent = red;
+            greenValueSpan.textContent = green;
+            blueValueSpan.textContent = blue;
+            rgbCodeSpan.textContent = `rgb(${red}, ${green}, ${blue})`;
+        }
+
+        redSlider.addEventListener('input', updateColor);
+        greenSlider.addEventListener('input', updateColor);
+        blueSlider.addEventListener('input', updateColor);
+        
+        // Инициализация при загрузке страницы
+        updateColor();
+    </script>
+</body>
+</html>

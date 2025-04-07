@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Спрайт таблица</title>
+    <style>
+        .sprite-container {
+            display: flex;
+            align-items: center;
+            height: 100vh;
+        }
+        .sprite-image {
+            width: 125px;
+            height: 125px;
+            transform: scaleX(-1);
+            background: url(./1000_F_204448700_dmkW8ddRFoRpZkO3gEq83ezSdBpyeGj7.jpg) 0px 0px;
+            animation: play 1s steps(8) infinite,
+            step 5s linear infinite;
+            position: absolute;
+            left: 0;
+        }
+        @keyframes play {
+            100% {
+                background-position: -1000px;
+            }
+        }
+        @keyframes step {
+            100% {
+                left: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="sprite-container">
+        <div class="sprite-image">    
+        </div>
+    </div>
+</body>
+</html>

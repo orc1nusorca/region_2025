@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Адаптивный макет</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: beige;
+        }
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 25px;
+        }
+        header {
+            background-color: bisque;
+        }
+        nav {
+            display: flex;
+            flex-direction: row-reverse;
+        }
+        ul {
+            display: flex;
+            justify-content: space-between;
+            gap: 25px;
+            list-style-type: none;
+        }
+        li {
+            text-decoration: underline;
+        }
+        main{
+            display: flex;
+            justify-content: space-between;
+            min-height: 90vh;
+        }
+        section .container {
+            display: grid;
+            gap: 25px;
+            grid-template-columns: repeat(3, 1fr);
+        }
+        article {
+            border: 2px solid black;
+            border-radius: 16px;
+            padding: 25px;
+        }
+        .aside{
+            background-color: blanchedalmond;
+        }
+        footer {
+            background-color: burlywood;
+        }
+        p, h2, h3 {
+            text-align: center;
+        }
+        @media screen and (width >= 576px) {
+            .container {
+                max-width: 95vw;
+            }
+        }
+        @media screen and (width >= 768px) {
+            .container {
+                max-width: 95vw;
+            }
+        }
+        @media screen and (width >= 992px) {
+            .container {
+                max-width: 95vw;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li>
+                        hagdjagbs
+                    </li>
+                    <li>
+                        haagdjagbscjhac
+                    </li>
+                    <li>
+                        jhachagdjagbscjhac
+                    </li>
+                    <li>
+                        hagdjagbsscjhac
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+            <section>
+                <div class="container">
+                    <article class="post">
+                        <h2>Текст</h2>
+                        <p>Еще чуть чуть текста</p>
+                    </article>
+                    <article class="post">
+                        <h2>Текст</h2>
+                        <p>Еще чуть чуть текста</p>
+                    </article>
+                    <article class="post">
+                        <h2>Текст</h2>
+                        <p>Еще чуть чуть текста</p>
+                    </article>
+                    <article class="post">
+                        <h2>Текст</h2>
+                        <p>Еще чуть чуть текста</p>
+                    </article>
+                    <article class="post">
+                        <h2>Текст</h2>
+                        <p>Еще чуть чуть текста</p>
+                    </article>
+                </div>
+            </section>
+            <aside class="aside">
+                <div class="container">
+                    <h3>Боковая панель</h3>
+                </div>
+            </aside>
+    </main>
+    <footer>
+        <div class="container">
+            <p>Подвал сайта</p>
+        </div>
+    </footer>
+</body>
+</html>

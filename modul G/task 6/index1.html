@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тумблер айось</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .toggle {
+            width: 100px;
+            height: 50px;
+            background-color: #1028af;
+            border-radius: 28px;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .toggle_slider {
+            width: 35px;
+            height: 35px;
+            position: absolute;
+            background-color: #76e4ff;
+            border-radius: 50%;
+            top: 8px;
+            left: 8px;
+            transition: all 0.3s ease;
+        }
+        .toggle:hover {
+            background-color: #76e4ff;
+            transition: all 0.3s ease;
+        }
+        .toggle:hover .toggle_slider {
+            background-color: #1028af;
+            transition: all 0.3s ease;
+            left: 52px;
+        }
+    </style>
+</head>
+<body>
+    <div class="toggle_container">
+        <div class="toggle">
+            <div class="toggle_slider">
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

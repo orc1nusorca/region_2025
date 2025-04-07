@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>UI Kit</title>
+  <style>
+    /* Basic Styling (Customize as needed) */
+    body {
+      font-family: sans-serif;
+      margin: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    select {
+      width: 200px;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #3e8e41;
+    }
+
+    input[type="checkbox"],
+    input[type="radio"] {
+      margin-right: 5px;
+    }
+
+    /* Styles for range and progress (can be further enhanced) */
+    input[type="range"] {
+      width: 200px;
+    }
+
+    progress {
+      width: 200px;
+    }
+
+    /* Styles for datepicker (basic, requires JavaScript for functionality) */
+    input[type="date"] {
+      width: 200px;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>UI Kit</h1>
+
+  <div class="form-group">
+    <label for="text-input">Текстовое поле:</label>
+    <input type="text" id="text-input" placeholder="Введите текст">
+  </div>
+
+  <div class="form-group">
+    <button>Кнопка</button>
+  </div>
+
+  <div class="form-group">
+    <label for="dropdown">Выпадающий список:</label>
+    <select id="dropdown">
+      <option value="option1">Опция 1</option>
+      <option value="option2">Опция 2</option>
+      <option value="option3">Опция 3</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="checkbox">Чекбокс:</label>
+    <input type="checkbox" id="checkbox" name="checkbox">
+  </div>
+
+  <div class="form-group">
+    <label for="radio">Радиокнопка:</label>
+    <input type="radio" id="radio" name="radio-group" value="option1"> Опция 1
+    <input type="radio" id="radio2" name="radio-group" value="option2"> Опция 2
+  </div>
+
+  <div class="form-group">
+    <input type="checkbox" id="checkbox-label">
+    <label for="checkbox-label">Метка с чекбоксом</label>
+  </div>
+
+  <div class="form-group">
+    <input type="radio" id="radio-label" name="radio-label-group" value="option1">
+    <label for="radio-label">Метка с радиокнопкой</label>
+  </div>
+
+  <div class="form-group">
+    <label for="date">Выпадающий календарь (Ввод даты):</label>
+    <input type="date" id="date" name="date">
+  </div>
+
+  <div class="form-group">
+    <label for="range">Диапазон:</label>
+    <input type="range" id="range" name="range" min="0" max="100" value="50">
+  </div>
+
+  <div class="form-group">
+    <label for="progress">Прогресс-бар:</label>
+    <progress id="progress" value="70" max="100"> 70% </progress>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Генератор цветов</title>
+    <style>
+        .colorBlock {
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="colorBlock" id="colorBlock"></div>
+        <div class="color_input">
+            <label for="redInput">Red</label>
+            <input type="range" value="0" min="0" max="255" id="redInput">
+        </div>
+        <div class="color_input">
+            <label for="greenInput">Green</label>
+            <input type="range" value="0" min="0" max="255" id="greenInput">
+        </div>
+        <div class="color_input">
+            <label for="blueInput">Blue</label>
+            <input type="range" value="0" min="0" max="255" id="blueInput">
+        </div>
+        <div class="RGB_code">
+            <span id="rgb_code">rgb (0 , 0, 0)</span>
+        </div>
+    </div>
+    <script>
+        const redSlider = document.getElementById('redInput');
+        const greenSlider = document.getElementById('greenInput');
+        const blueSlider = document.getElementById('blueInput');
+        const colorBlock = document.getElementById('colorBlock');
+        const rgb_code = document.getElementById('rgb_code');
+        function updateColor() {
+            const red = redSlider.value;
+            const green = greenSlider.value;
+            const blue = blueSlider.value;
+            colorBlock.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+            rgb_code.textContent = `rgb(${red}, ${green}, ${blue})`;
+        }
+        redSlider.addEventListener('input', updateColor);
+        greenSlider.addEventListener('input', updateColor);
+        blueSlider.addEventListener('input', updateColor);
+        updateColor();
+    </script>
+</body>
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Простой Калькулятор</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .calculator {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+        }
+
+        #display {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 20px;
+            text-align: right;
+            max-width: 240px;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        button {
+            padding: 15px;
+            font-size: 18px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #eee;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        button:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <input type="text" id="display" readonly>
+        <div class="buttons">
+            <button onclick="clearDisplay()">C</button>
+            <button onclick="appendToDisplay('(')">(</button>
+            <button onclick="appendToDisplay(')')">)</button>
+            <button onclick="appendToDisplay('/')">/</button>
+            <button onclick="appendToDisplay('7')">7</button>
+            <button onclick="appendToDisplay('8')">8</button>
+            <button onclick="appendToDisplay('9')">9</button>
+            <button onclick="appendToDisplay('*')">*</button>
+            <button onclick="appendToDisplay('4')">4</button>
+            <button onclick="appendToDisplay('5')">5</button>
+            <button onclick="appendToDisplay('6')">6</button>
+            <button onclick="appendToDisplay('-')">-</button>
+            <button onclick="appendToDisplay('1')">1</button>
+            <button onclick="appendToDisplay('2')">2</button>
+            <button onclick="appendToDisplay('3')">3</button>
+            <button onclick="appendToDisplay('+')">+</button>
+            <button onclick="appendToDisplay('0')">0</button>
+            <button onclick="appendToDisplay('.')">.</button>
+            <button onclick="appendToDisplay('%')">%</button>
+            <button onclick="calculate()">=</button>
+            <button onclick="appendToDisplay('^')">^</button>
+        </div>
+    </div>
+    <script>
+        let display = document.getElementById('display');
+
+        function appendToDisplay(value) {
+            display.value += value;
+        }
+
+        function clearDisplay() {
+            display.value = '';
+        }
+
+        function calculate() {
+             try {
+                let result = calculateExpression(display.value);
+                if (result !== null){
+                   display.value = result
+               }
+
+           } catch (error) {
+                display.value = 'Ошибка';
+             }
+        }
+
+         function calculateExpression(expression) {
+            function applyOperator(op, operand1, operand2) {
+                if (op === '+') return operand1 + operand2;
+                if (op === '-') return operand1 - operand2;
+                if (op === '*') return operand1 * operand2;
+                if (op === '/') {
+                    if (operand2 === 0) {
+                        throw new Error("Деление на ноль");
+                    }
+                    return operand1 / operand2;
+                }
+                if (op === '%') {
+                    if (operand2 === 0) {
+                        throw new Error("Деление на ноль");
+                    }
+                    return operand1 % operand2;
+                }
+                if (op === '^') return operand1 ** operand2;
+                throw new Error(`Неизвестный оператор: ${op}`);
+            }
+
+            function calculate(tokens) {
+                const values = [];
+                const operators = [];
+
+                const precedence = {
+                    '(': 0,
+                    '+': 1,
+                    '-': 1,
+                    '*': 2,
+                    '/': 2,
+                    '%': 2,
+                    '^': 3,
+                    'u-': 4
+                };
+
+                let i = 0;
+                while (i < tokens.length) {
+                    const token = tokens[i];
+                    if (!isNaN(parseFloat(token))) {
+                        values.push(parseFloat(token));
+                    } else if (token === '(') {
+                        operators.push(token);
+                    } else if (token === ')') {
+                        while (operators.length > 0 && operators[operators.length - 1] !== '(') {
+                            const op = operators.pop();
+                            if (op === 'u-'){
+                                const val = values.pop()
+                                values.push(-val)
+                            } else{
+                                const operand2 = values.pop();
+                                const operand1 = values.pop();
+                                values.push(applyOperator(op, operand1, operand2));
+                            }
+                        }
+                        operators.pop(); // remove '('
+                    } else if (token in precedence) {
+                        while (operators.length > 0 && operators[operators.length - 1] !== '(' && precedence[operators[operators.length - 1]] >= precedence[token]) {
+                            const op = operators.pop();
+                            if (op === 'u-'){
+                                const val = values.pop()
+                                values.push(-val)
+                            }else{
+                            const operand2 = values.pop();
+                            const operand1 = values.pop();
+                            values.push(applyOperator(op, operand1, operand2));
+                            }
+                        }
+                        operators.push(token);
+                    }
+                    i++;
+                }
+
+                while (operators.length > 0) {
+                    const op = operators.pop();
+                    if(op === 'u-'){
+                    const val = values.pop()
+                    values.push(-val)
+                    } else{
+                    const operand2 = values.pop();
+                    const operand1 = values.pop();
+                    values.push(applyOperator(op, operand1, operand2));
+                    }
+                }
+
+                return values[0];
+            }
+
+            function tokenize(expression) {
+                const tokens = [];
+                let i = 0;
+                while (i < expression.length) {
+                    if (!isNaN(parseFloat(expression[i])) || expression[i] === '.') {
+                    let num = '';
+                    while (i < expression.length && (!isNaN(parseFloat(expression[i])) || expression[i] === '.')) {
+                        num += expression[i];
+                        i++;
+                    }
+                    tokens.push(num);
+                    continue;
+                    } else if (['+', '-', '*', '/', '%', '^', '(', ')'].includes(expression[i])) {
+                        tokens.push(expression[i]);
+                    } else if (expression[i].trim() !== '') {
+                    throw new Error(`Недопустимый символ: ${expression[i]}`);
+                }
+                    i++;
+                }
+
+                const newTokens = [];
+                for (let i = 0; i < tokens.length; i++) {
+                    if (tokens[i] === '-' && (i === 0 || ['(', '+', '-', '*', '/', '%','^'].includes(tokens[i-1]))) {
+                    newTokens.push('u-');
+                    }else{
+                    newTokens.push(tokens[i]);
+                    }
+                }
+
+                return newTokens;
+            }
+            try{
+                const tokens = tokenize(expression)
+                return calculate(tokens)
+            }
+            catch (e){
+                console.error(`Ошибка в выражении: ${e}`)
+                return null
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="primer" required>
+    <button onclick="calculate()">Вычислить</button>
+    <div id="result"></div>
+    <script>
+        function calculate() {
+            const primer = document.getElementById('primer').value;
+            try {
+                const result = exp(primer);
+                document.getElementById('result').innerText = `Результат: ${result}`;
+            } catch(error) {
+                document.getElementById('result').innerText = `Результат: ${error}`;
+            }
+        }
+        function exp(expr) {
+            expr = expr.replace(/\s+/g, '');
+            if (/[^0-9+\-*/^%().]/.test(expr)) {
+                throw new Error('ошибка');
+            }
+            expr = expr.replace(/\^/g, '**');
+            return eval(expr);
+        }
+    </script>
+</body>
+</html>
