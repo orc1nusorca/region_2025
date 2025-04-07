@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/registartion.css">
+    <link rel="stylesheet" href="../css/adaptive.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+</head>
+<body data-theme='dark'>
+    <header class="header">
+        <div class="container">
+            <nav class="header__nav">
+                <div class="header__nav-logo">
+                    <a href="index.html" class="nav-list__item-logo">
+                        <img src="../img/logo.png" alt="logotip">
+                    </a>
+                </div>
+                <ul class="header__nav-list">
+                    <li class="header__nav-list__item">
+                        <a href="registration.html">Регистрация</a>
+                    </li>
+                    <li class="header__nav-list__item">
+                        <a href="account.html">Личный кабинет</a>
+                    </li>
+                    <li class="header__nav-list__item">
+                        <a href="index-light.html">Светлая тема</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="main">
+        <section class="registration">
+            <div class="container">
+                <h2 class="section-title">Регистрация</h2>
+                <div class="registration-wrapper">
+                    <form action="#" method="POST" class="registration__form">
+                        <h3 class="registration__form-title">Личная регистрация</h3>
+                        <div class="form-group">
+                            <label for="email">E-mail:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="first-name">Имя:</label>
+                            <input type="text" id="first-name" name="first_name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="last-name">Фамилия:</label>
+                            <input type="text" id="last-name" name="last_name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="age">Возраст:</label>
+                            <input type="number" id="age" name="age" min="0" required>
+                            <p>Или выберите дату рождения:</p>
+                            <input type="date" name="birth_date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="gender">Пол:</label>
+                            <select id="gender" name="gender" required>
+                                <option value="">Выберите</option>
+                                <option value="male">Мужской</option>
+                                <option value="female">Женский</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Пароль:</label>
+                            <input type="password" id="password" name="password" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="confirm-password">Повтор пароля:</label>
+                            <input type="password" id="confirm-password" name="confirm_password" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="photo">Семейная фотография:</label>
+                            <input type="file" id="photo" name="photo" accept="image/*" required>
+                        </div>
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" name="consent" required>
+                                Я согласен на обработку персональных данных
+                            </label>
+                        </div>
+                        <button type="button">Добавить члена семьи</button>
+                        <button type="button">Удалить члена семьи</button>
+                        <!-- Поля для членов семьи -->
+                        <div class="family-member">
+                            <h3 class="registration__form-title">Член семьи</h3>
+                            <div class="form-group">
+                                <label for="family-last-name">Фамилия:</label>
+                                <input type="text" id="family-last-name" name="family_last_name">
+                            </div>
+                            <div class="form-group">
+                                <label for="family-first-name">Имя:</label>
+                                <input type="text" id="family-first-name" name="family_first_name">
+                            </div>
+                            <div class="form-group">
+                                <label for="family-age">Возраст:</label>
+                                <input type="number" id="family-age" name="family_age" min="0">
+                            </div>
+                            <div class="form-group">
+                                <label for="family-gender">Пол:</label>
+                                <select id="family-gender" name="family_gender">
+                                    <option value="male">Мужской</option>
+                                    <option value="female">Женский</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="submit">Зарегистрироваться</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-content__info">
+                    <p>Телефон:
+                        <a href="tel:+74842234567">+7 (4842) 23-45-67</a>
+                    </p>
+                    <p>Е-mail:
+                        <a href="mailto:family@cosmos.ru">family@cosmos.ru</a>
+                    </p>
+                </div>
+                <nav class="footer-content__navigation">
+                    <ul>
+                        <li>
+                            <a href="index.html">Главная</a>
+                        </li>
+                        <li>
+                            <a href="index-light.html">Главная-светлая</a>
+                        </li>
+                        <li>
+                            <a href="registration.html">Регистрация</a>
+                        </li>
+                        <li>
+                            <a href="competition.html">Конкурс</a>
+                        </li>
+                        <li>
+                            <a href="account.html">Личный кабинет</a>
+                        </li>
+                        <li>
+                            <a href="404.html">Страница не найдена</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/account.css">
+    <link rel="stylesheet" href="../css/adaptive.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет</title>
+</head>
+<body data-theme='dark'>
+    <header class="header">
+        <div class="container">
+            <nav class="header__nav">
+                <div class="header__nav-logo">
+                    <a href="index.html" class="nav-list__item-logo">
+                        <img src="../img/logo.png" alt="logotip">
+                    </a>
+                </div>
+                <ul class="header__nav-list">
+                    <li class="header__nav-list__item">
+                        <a href="account.html">Личный кабинет</a>
+                    </li>
+                    <li class="header__nav-list__item">
+                        <a href="index-light.html">Светлая тема</a>
+                    </li>
+                    <li class="header__nav-list__item">
+                        <a href="index.html">Выход</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="main">
+        <section class="contestreg">
+            <div class="container">
+                <div class="contestreg__wrapper">
+                    <h2 class="section-title">Запись на конкурс</h2>
+                    <form action="#" method="post" class="registration__form">
+                        <div class="form-group">
+                            <label for="competition">Конкурс:</label>
+                            <select id="competition" name="competition" required>
+                                 <option value="Конкурс 1">Конкурс 1</option>
+                                 <option value="Конкурс 2">Конкурс 2</option>
+                                 <option value="Конкурс 3">Конкурс 3</option>
+                                 <option value="Конкурс 4">Конкурс 4</option>
+                                 <option value="Конкурс 5">Конкурс 5</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="date">Дата:</label>
+                            <input type="date" id="date" name="date" value="2024-07-08" min="2024-07-08" max="2024-07-08" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="time">Время:</label>
+                            <select id="time" name="time" required>
+                                <option value="9:00">9:00</option>
+                                <option value="10:00">10:00</option>
+                                <option value="11:00">11:00</option>
+                                <option value="12:00">12:00</option>
+                                <option value="13:00">13:00</option>
+                                <option value="14:00">14:00</option>
+                                <option value="15:00">15:00</option>
+                                <option value="16:00">16:00</option>
+                                <option value="17:00">17:00</option>
+                                <option value="18:00">18:00</option>
+                                <option value="19:00">19:00</option>
+                                <option value="20:00">20:00</option>
+                                <option value="21:00">21:00</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="participants">Количество человек:</label>
+                            <input type="number" id="participants" name="participants" min="1" value="1" required>
+                        </div>
+                        <button type="submit">Записаться на конкурс</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-content__info">
+                    <p>Телефон:
+                        <a href="tel:+74842234567">+7 (4842) 23-45-67</a>
+                    </p>
+                    <p>Е-mail:
+                        <a href="mailto:family@cosmos.ru">family@cosmos.ru</a>
+                    </p>
+                </div>
+                <nav class="footer-content__navigation">
+                    <ul>
+                        <li>
+                            <a href="index.html">Главная</a>
+                        </li>
+                        <li>
+                            <a href="index-light.html">Главная-светлая</a>
+                        </li>
+                        <li>
+                            <a href="registration.html">Регистрация</a>
+                        </li>
+                        <li>
+                            <a href="competition.html">Конкурс</a>
+                        </li>
+                        <li>
+                            <a href="account.html">Личный кабинет</a>
+                        </li>
+                        <li>
+                            <a href="404.html">Страница не найдена</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

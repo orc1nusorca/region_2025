@@ -1,0 +1,406 @@
+@media screen and (width <= 768px) {
+    .container {
+        max-width: 96vw;
+        padding: 2vw 0 3vw;
+    }
+
+    .header__nav-list {
+        display: none;
+    }
+
+    .header__nav-list__item a {
+        font-size: 1.75vw;
+    }
+
+    .section-title {
+        font-size: 4.5vw;
+    }
+
+    .popularCompetition__wrapper {
+        max-width: 90vw;
+    }
+
+    .slide {
+        padding: 4vw;
+        flex-direction: column;
+    }
+
+    .slide-content {
+        gap: 1.5vw;
+        padding: 1.5vw;
+    }
+
+    .slide-image {
+        width: 60vw;
+        height: 50vw;
+        align-self: center;
+    }
+
+    .about-us__wrapper-img img {
+        width: 50vw;
+        height: 40vw;
+    }
+    
+    .slide-title, .authorization-wrapper__form-label, .authorization-wrapper__form-input, .contest-title, .feedback-slider__card-header__author  {
+        font-size: 3vw;
+    }
+    
+    .slide-description, .authorization-wrapper__link a, .about-us__wrapper-text p, .contest-description, .entries, .feedback-slider__card-text, .footer-content__info p, .footer-content__info p a, .footer-content__navigation ul li a {
+        font-size: 2.5vw;
+    }
+
+    .slide-button, .authorization-wrapper__form-btn, .contest-button, .feedback-slider__card-header__link {
+        font-size: 3vw;
+    }
+
+    .contest-image {
+        max-width: 37vw;
+    }
+
+    .contests-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .feedback-slider__card-header__avatar {
+        width: 35vw;
+        height: 35vw;
+    }
+
+    .footer-content__navigation ul {
+        max-width: 45vw;
+    }
+
+    /* страница ошибки */
+
+    .error-title {
+        font-size: 20vw;
+    }
+
+    .error__wrapper p, .error__wrapper p a {
+        font-size: 2vw;
+        max-width: 35vw;
+    }
+
+    /* страница конкурс */
+
+    .slide__wrapper {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .slide__wrapper .slide {
+        width: 65vw;
+    }
+}
+
+@media screen and (width > 768px) and (width <= 920px) {
+    .container {
+        max-width: 96vw;
+        padding: 2vw 0 3vw;
+    }
+
+    .header__nav-list {
+        gap: 1.75vw;
+    }
+
+    .header__nav-list__item a {
+        font-size: 1.75vw;
+    }
+
+    .section-title {
+        font-size: 4.5vw;
+    }
+
+    .popularCompetition__wrapper {
+        max-width: 90vw;
+    }
+
+    .slide {
+        padding: 4vw;
+        flex-direction: column;
+    }
+
+    .slide-content {
+        gap: 1.5vw;
+        padding: 1.5vw;
+    }
+
+    .slide-image {
+        width: 60vw;
+        height: 50vw;
+        align-self: center;
+    }
+
+    .about-us__wrapper-img img {
+        width: 50vw;
+        height: 40vw;
+    }
+    
+    .slide-title, .authorization-wrapper__form-label, .authorization-wrapper__form-input, .contest-title, .feedback-slider__card-header__author  {
+        font-size: 3vw;
+    }
+    
+    .slide-description, .authorization-wrapper__link a, .about-us__wrapper-text p, .contest-description, .entries, .feedback-slider__card-text, .footer-content__info p, .footer-content__info p a, .footer-content__navigation ul li a {
+        font-size: 2.5vw;
+    }
+
+    .slide-button, .authorization-wrapper__form-btn, .contest-button, .feedback-slider__card-header__link {
+        font-size: 3vw;
+    }
+
+    .contest-image {
+        max-width: 37vw;
+    }
+
+    .contests-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .feedback-slider__card-header__avatar {
+        width: 35vw;
+        height: 35vw;
+    }
+
+    .footer-content__navigation ul {
+        max-width: 45vw;
+    }
+
+    /* страница ошибки */
+
+    .error-title {
+        font-size: 20vw;
+    }
+
+    .error__wrapper p, .error__wrapper p a {
+        font-size: 2vw;
+        max-width: 35vw;
+    }
+
+    /* страница конкурс */
+
+    .slide__wrapper {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .slide__wrapper .slide {
+        width: 65vw;
+    }
+}
+
+@media screen and (width > 920px) and (width <= 1340px) {
+    .container {
+        max-width: 96vw;
+        padding: 2vw 0 3vw;
+    }
+
+    .header__nav-list {
+        gap: 2vw;
+    }
+
+    .header__nav-list__item a {
+        font-size: 1.75vw;
+    }
+
+    .section-title {
+        font-size: 2.5vw;
+    }
+
+    .popularCompetition__wrapper {
+        max-width: 90vw;
+    }
+
+    .slide {
+        padding: 4vw;
+    }
+
+    .slide-content {
+        gap: 1.5vw;
+        padding: 1.5vw;
+    }
+
+    .slide-image {
+        width: 60vw;
+        height: 50vw;
+    }
+    
+    .slide-title, .authorization-wrapper__form-label, .authorization-wrapper__form-input, .contest-title, .feedback-slider__card-header__author  {
+        font-size: 2vw;
+    }
+    
+    .slide-description, .authorization-wrapper__link a, .about-us__wrapper-text p, .contest-description, .entries, .feedback-slider__card-text, .footer-content__info p, .footer-content__info p a, .footer-content__navigation ul li a {
+        font-size: 1.75vw;
+    }
+
+    .slide-button, .authorization-wrapper__form-btn, .contest-button, .feedback-slider__card-header__link {
+        font-size: 2vw;
+    }
+
+    .contest-image {
+        max-width: 25vw;
+    }
+
+    /* страница ошибки */
+
+    .error-title {
+        font-size: 20vw;
+    }
+
+    .error__wrapper p, .error__wrapper p a {
+        font-size: 2vw;
+        max-width: 35vw;
+    }
+
+    /* страница конкурс */
+
+    .slide__wrapper {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .slide__wrapper .slide {
+        width: 65vw;
+    }
+}
+
+@media screen and (width > 1340px) and (width <= 1540px) {
+    .container {
+        max-width: 96vw;
+        padding: 2vw 0 3vw;
+    }
+
+    .header__nav-list {
+        gap: 1.75vw;
+    }
+
+    .header__nav-list__item a {
+        font-size: 1.75vw;
+    }
+
+    .section-title {
+        font-size: 2.5vw;
+    }
+
+    .popularCompetition__wrapper {
+        max-width: 90vw;
+    }
+
+    .slide {
+        padding: 2vw;
+    }
+
+    .slide-content {
+        gap: 1.5vw;
+        padding: 1.5vw;
+    }
+    
+    .slide-title, .authorization-wrapper__form-label, .authorization-wrapper__form-input, .contest-title, .feedback-slider__card-header__author  {
+        font-size: 2vw;
+    }
+    
+    .slide-description, .authorization-wrapper__link a, .about-us__wrapper-text p, .contest-description, .entries, .feedback-slider__card-text, .footer-content__info p, .footer-content__info p a, .footer-content__navigation ul li a {
+        font-size: 1.75vw;
+    }
+
+    .slide-button, .authorization-wrapper__form-btn, .contest-button, .feedback-slider__card-header__link {
+        font-size: 2vw;
+    }
+
+    .contest-image {
+        max-width: 25vw;
+    }
+
+    /* страница ошибки */
+
+    .error-title {
+        font-size: 20vw;
+    }
+
+    .error__wrapper p, .error__wrapper p a {
+        font-size: 2vw;
+        max-width: 35vw;
+    }
+
+    /* страница конкурс */
+
+    .slide__wrapper {
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+    }
+
+    .slide__wrapper .slide {
+        width: 40vw;
+    }
+}
+
+@media screen and (width > 1540px) and (width <= 1740px) {
+    .container {
+        max-width: 96vw;
+        padding: 2vw 0 3vw;
+    }
+
+    .header__nav-list {
+        gap: 1.75vw;
+    }
+
+    .header__nav-list__item a {
+        font-size: 1.75vw;
+    }
+
+    .section-title {
+        font-size: 2.5vw;
+    }
+    
+
+    .popularCompetition__wrapper {
+        max-width: 90vw;
+    }
+
+    .slide {
+        padding: 2vw;
+        justify-content: space-evenly;
+    }
+
+    .slide-content {
+        gap: 1.5vw;
+        padding: 1.5vw;
+    }
+    
+    .slide-title, .authorization-wrapper__form-label, .authorization-wrapper__form-input, .contest-title, .feedback-slider__card-header__author  {
+        font-size: 2vw;
+    }
+    
+    .slide-description, .authorization-wrapper__link a, .about-us__wrapper-text p, .contest-description, .entries, .feedback-slider__card-text, .footer-content__info p, .footer-content__info p a, .footer-content__navigation ul li a {
+        font-size: 1.75vw;
+    }
+
+    .slide-button, .authorization-wrapper__form-btn, .contest-button, .feedback-slider__card-header__link {
+        font-size: 2vw;
+    }
+
+    .contest-image {
+        max-width: 25vw;
+    }
+
+    /* страница ошибки */
+
+    .error-title {
+        font-size: 20vw;
+    }
+
+    .error__wrapper p, .error__wrapper p a {
+        font-size: 2vw;
+        max-width: 35vw;
+    }
+
+    /* страница конкурс */
+
+    .slide__wrapper {
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+    }
+
+    .slide__wrapper .slide {
+        width: 40vw;
+    }
+}

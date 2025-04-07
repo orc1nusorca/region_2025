@@ -1,0 +1,137 @@
+body[data-theme='dark'] {
+    --colors-text: hsl(0, 0%, 100%);
+    --colors-bg: hsl(207, 26%, 17%);
+  
+    --shadow: rgba(245, 245, 245, 0.2) 0 0 16px;
+}
+
+*, *::after, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-align: center;
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    padding: 0;
+    width:100%;
+    line-height: 150%;
+    overflow-x: hidden;
+    font-family: sans-serif;
+    color: var(--colors-text);
+    font-weight: var(--fw-light);
+    background-color: var(--colors-bg);
+}
+
+.container {
+    max-width: 1500px;
+    padding: 60px 0 80px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.header {
+    box-shadow: var(--shadow);
+}
+
+.header__nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__nav-list {
+    display: flex;
+    gap: 45px;
+}
+
+.header__nav-list__item a {
+    color: var(--colors-text);
+    font-size: 24px;
+}
+
+/* анимация */
+.header__nav-list__item a:hover, .footer-content__info p a:hover, .footer-content__navigation a:hover {
+    text-decoration: underline;
+    transition: text-decoration 0.6s ease;
+}
+
+.section-title {
+    font-size: 36px;
+    text-align: center;
+    padding-bottom: 45px;
+    line-height: 150%;
+}
+
+.error__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 200px 150px;
+    gap: 25px;
+}
+
+.error-title {
+    font-size: 250px;
+    padding-bottom: 100px;
+}
+
+.error__wrapper p {
+    max-width: 500px;
+    text-align: center;
+    line-height: 150%;
+}
+
+.error__wrapper p, .error__wrapper p a {
+    color: var(--colors-text);
+    font-size: 28px;
+}
+
+.error__wrapper p a {
+    text-decoration: underline;
+}
+
+.footer {
+    box-shadow: var(--shadow);
+}
+
+.header .container, .footer .container {
+    padding: 30px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-content__info {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.footer-content__info p {
+    font-size: 20px;
+}
+
+.footer-content__info p a, .footer-content__navigation a {
+    color: var(--colors-text);
+    font-size: 20px;
+}
+
+.footer-content__navigation ul {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 600px;
+    justify-content: center;
+    gap:  25px;
+}

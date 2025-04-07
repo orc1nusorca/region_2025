@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/adaptive.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная страница</title>
+</head>
+<body data-theme='dark'>
+    <header class="header">
+        <div class="container">
+            <nav class="header__nav">
+                <div class="header__nav-logo">
+                    <a href="index.html" class="nav-list__item-logo">
+                        <img src="../img/logo.svg" alt="logotip">
+                    </a>
+                </div>
+                <ul class="header__nav-list">
+                    <li class="header__nav-list__item">
+                        <a href="registration.html">Регистрация</a>
+                    </li>
+                    <li class="header__nav-list__item">
+                        <a href="#autorization">Авторизация</a>
+                    </li>
+                    <li class="header__nav-list__item">
+                        <a href="account.html">Личный кабинет</a>
+                    </li>
+                    <li class="header__nav-list__item">
+                        <a href="#about-us">О нас</a>
+                    </li>
+                    <li class="header__nav-list__item">
+                        <a href="#competitions">Конкурсы</a>
+                    </li>
+                    <li class="header__nav-list__item">
+                        <a href="#search">Поиск</a>
+                    </li>
+                    <li class="header__nav-list__item">
+                        <a href="#contacts">Контакты</a>
+                    </li>
+                    <li class="header__nav-list__item">
+                        <a href="index-light.html">Светлая тема</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="main">
+        <section class="popularCompetition" id="popularCompetition">
+            <div class="container">
+                <h2 class="section-title">Недавние объявления</h2>
+                <div class="popularCompetition__wrapper">
+                    <div class="popularCompetition__wrapper-slider">
+                        <!-- Слайд 1 -->
+                        <div class="slide">
+                            <img class="slide-image" src="../img/image1.jpg" alt="Конкурс 1">
+                            <div class="slide-content">
+                                <h3 class="slide-title">Конкурса 1</h3>
+                                <p class="slide-description">Краткое описание конкурса 1...</p>
+                                <div class="slide-rating">
+                                    <!-- Здесь будут элементы рейтинга (графика) -->
+                                    <span class="star-rating">&#11088;&#11088;&#11088;&#11088;</span>
+                                </div>
+                                <button class="slide-button">Подробнее</button>
+                            </div>
+                        </div>
+                        <!-- Слайд 2 -->
+                        <div class="slide">
+                            <img class="slide-image" src="../img/image1.jpg" alt="Конкурс 1">
+                            <div class="slide-content">
+                                <h3 class="slide-title">Конкурса 2</h3>
+                                <p class="slide-description">Краткое описание конкурса 2...</p>
+                                <div class="slide-rating">
+                                    <!-- Здесь будут элементы рейтинга (графика) -->
+                                    <span class="star-rating">&#11088;&#11088;&#11088;&#11088;</span>
+                                </div>
+                                <button class="slide-button">Подробнее</button>
+                            </div>
+                        </div>
+                        <!-- Слайд 3 -->
+                        <div class="slide">
+                            <img class="slide-image" src="../img/image1.jpg" alt="Конкурс 1">
+                            <div class="slide-content">
+                                <h3 class="slide-title">Конкурса 3</h3>
+                                <p class="slide-description">Краткое описание конкурса 3...</p>
+                                <div class="slide-rating">
+                                    <!-- Здесь будут элементы рейтинга (графика) -->
+                                    <span class="star-rating">&#11088;&#11088;&#11088;&#11088;</span>
+                                </div>
+                                <button class="slide-button">Подробнее</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Индикация активного слайда -->
+                    <div class="slider-dots">
+                        <span class="dot active-dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="autorization" id="autorization">
+            <div class="container">
+                <h2 class="section-title">Авторизация</h2>
+                <div class="authorization-wrapper">
+                    <form action="" class="authorization-wrapper__form">
+                        <div class="authorization-wrapper__form-field">
+                            <label for="regLogin" class="authorization-wrapper__form-label">Логин</label>
+                            <input type="email" class="authorization-wrapper__form-input">
+                        </div>
+                        <div class="authorization-wrapper__form-field">
+                            <label for="regPassword" class="authorization-wrapper__form-label">Пароль</label>
+                            <input type="password" class="authorization-wrapper__form-input">
+                        </div>
+                        <button type="button" class="authorization-wrapper__form-btn">Войти</button>
+                        <p class="authorization-wrapper__link">
+                            <a href="#">Забыли пароль? Нажмите для восстановления</a>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section class="about-us" id="about-us">
+            <div class="container">
+                <h2 class="section-title">О нас</h2>
+                <div class="about-us__wrapper">
+                    <div class="about-us__wrapper-text">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur amet aliquam consequuntur tenetur, sapiente doloribus earum in molestiae culpa rerum quo excepturi! Ad, quis blanditiis? Unde qui praesentium veritatis ipsum?</p>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur amet aliquam consequuntur tenetur, sapiente doloribus earum in molestiae culpa rerum quo excepturi! Ad, quis blanditiis? Unde qui praesentium veritatis ipsum?</p>
+                    </div>
+                    <div class="about-us__wrapper-img">
+                        <img src="../img/image2.jpg" alt="Company">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="welcome">
+            <div class="container">
+                <h2 class="section-title">Приветствие от организаторов</h2>
+                <div class="welcome-wrapper">
+                    <video class="welcome-wrapper__video" autoplay loop>
+                        <source src="../img/hello.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </section>
+        <section class="competitions" id="competitions">
+            <div class="cotainer">
+                <h2 class="section-title">Конкурсы</h2>
+                <div class="competitions-wrapper">
+                    <div class="contests-grid">
+                        <div class="contest-card">
+                            <img class="contest-image" src="../img/image1.jpg" alt="Конкурс 1">
+                            <h3 class="contest-title">Конкурс 1</h3>
+                            <p class="contest-description">Краткое описание конкурса 1...</p>
+                            <div class="contest-stats">
+                                <span class="entries">Записей: 120</span>
+                                <div class="contest-rating">
+                                    <span class="star-rating">&#11088;&#11088;&#11088;&#11088;</span>
+                                </div>
+                            </div>
+                            <a href="#" class="contest-button">Записаться</a>
+                        </div>
+                        <div class="contest-card">
+                            <img class="contest-image" src="../img/image1.jpg" alt="Конкурс 1">
+                            <h3 class="contest-title">Конкурс 1</h3>
+                            <p class="contest-description">Краткое описание конкурса 1...</p>
+                            <div class="contest-stats">
+                                <span class="entries">Записей: 120</span>
+                                <div class="contest-rating">
+                                    <span class="star-rating">&#11088;&#11088;&#11088;&#11088;</span>
+                                </div>
+                            </div>
+                            <a href="#" class="contest-button">Записаться</a>
+                        </div>
+                        <div class="contest-card">
+                            <img class="contest-image" src="../img/image1.jpg" alt="Конкурс 1">
+                            <h3 class="contest-title">Конкурс 1</h3>
+                            <p class="contest-description">Краткое описание конкурса 1...</p>
+                            <div class="contest-stats">
+                                <span class="entries">Записей: 120</span>
+                                <div class="contest-rating">
+                                    <span class="star-rating">&#11088;&#11088;&#11088;&#11088;</span>
+                                </div>
+                            </div>
+                            <a href="#" class="contest-button">Записаться</a>
+                        </div>
+                        <div class="contest-card">
+                            <img class="contest-image" src="../img/image1.jpg" alt="Конкурс 1">
+                            <h3 class="contest-title">Конкурс 1</h3>
+                            <p class="contest-description">Краткое описание конкурса 1...</p>
+                            <div class="contest-stats">
+                                <span class="entries">Записей: 120</span>
+                                <div class="contest-rating">
+                                    <span class="star-rating">&#11088;&#11088;&#11088;&#11088;</span>
+                                </div>
+                            </div>
+                            <a href="#" class="contest-button">Записаться</a>
+                        </div>
+                        <div class="contest-card">
+                            <img class="contest-image" src="../img/image1.jpg" alt="Конкурс 1">
+                            <h3 class="contest-title">Конкурс 1</h3>
+                            <p class="contest-description">Краткое описание конкурса 1...</p>
+                            <div class="contest-stats">
+                                <span class="entries">Записей: 120</span>
+                                <div class="contest-rating">
+                                    <span class="star-rating">&#11088;&#11088;&#11088;&#11088;</span>
+                                </div>
+                            </div>
+                            <a href="#" class="contest-button">Записаться</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="search" id="search">
+            <div class="container">
+                <h2 class="section-title">Поиск</h2>
+                <div class="search-wrapper">
+                    <input type="text" id="search-input" placeholder="Введите название или описание конкурса" list="suggestions">
+                    <datalist id="suggestions">
+                        <!-- Варианты подсказок будут здесь -->
+                        <option value="Конкурс 1">
+                        <option value="Конкурс 2">
+                        <option value="Конкурс 3">
+                        <option value="Конкурс 4">
+                        <option value="Конкурс 5">
+                    </datalist>
+                    <button type="button" class="search-button">Поиск</button>
+                </div>
+            </div>
+        </section>
+        <section class="feedback">
+            <div class="container">
+                <h2 class="section-title">Отзывы клиентов</h2>
+                <div class="feedback-slider">
+                    <div class="feedback-slider__slide active">
+                        <div class="feedback-slider__card">
+                            <div class="feedback-slider__card-header">
+                                <img class="feedback-slider__card-header__avatar" src="../img//avatar1.jpg" alt="Аватар автора 1">
+                                <div class="feedback-slider__card-header__info">
+                                <h3 class="feedback-slider__card-header__author">Имя автора 1</h3>
+                                <a class="feedback-slider__card-header__link" href="#">Описание конкурса</a>
+                                    <span class="feedback-date">2024-08-10</span>
+                                </div>
+                            </div>
+                            <p class="feedback-slider__card-text">Текст отзыва 1...</p>
+                        </div>
+                    </div>
+                    <div class="feedback-slider__slide">
+                        <div class="feedback-slider__card">
+                            <div class="feedback-slider__card-header">
+                                <img class="feedback-slider__card-header__avatar" src="../img//avatar1.jpg" alt="Аватар автора 1">
+                                <div class="feedback-slider__card-header__info">
+                                <h3 class="feedback-slider__card-header__author">Имя автора 1</h3>
+                                <a class="feedback-slider__card-header__link" href="#">Описание конкурса</a>
+                                    <span class="feedback-date">2024-08-10</span>
+                                </div>
+                            </div>
+                            <p class="feedback-slider__card-text">Текст отзыва 1...</p>
+                        </div>
+                    </div>
+                    <div class="feedback-slider__slide">
+                        <div class="feedback-slider__card">
+                            <div class="feedback-slider__card-header">
+                                <img class="feedback-slider__card-header__avatar" src="../img//avatar1.jpg" alt="Аватар автора 1">
+                                <div class="feedback-slider__card-header__info">
+                                <h3 class="feedback-slider__card-header__author">Имя автора 1</h3>
+                                <a class="feedback-slider__card-header__link" href="#">Описание конкурса</a>
+                                    <span class="feedback-date">2024-08-10</span>
+                                </div>
+                            </div>
+                            <p class="feedback-slider__card-text">Текст отзыва 1...</p>
+                        </div>
+                    </div>
+                    <div class="feedback-slider__slide">
+                        <div class="feedback-slider__card">
+                            <div class="feedback-slider__card-header">
+                                <img class="feedback-slider__card-header__avatar" src="../img//avatar1.jpg" alt="Аватар автора 1">
+                                <div class="feedback-slider__card-header__info">
+                                <h3 class="feedback-slider__card-header__author">Имя автора 1</h3>
+                                <a class="feedback-slider__card-header__link" href="#">Описание конкурса</a>
+                                    <span class="feedback-date">2024-08-10</span>
+                                </div>
+                            </div>
+                            <p class="feedback-slider__card-text">Текст отзыва 1...</p>
+                        </div>
+                    </div>
+                    <div class="feedback-slider__slide">
+                        <div class="feedback-slider__card">
+                            <div class="feedback-slider__card-header">
+                                <img class="feedback-slider__card-header__avatar" src="../img//avatar1.jpg" alt="Аватар автора 1">
+                                <div class="feedback-slider__card-header__info">
+                                <h3 class="feedback-slider__card-header__author">Имя автора 1</h3>
+                                <a class="feedback-slider__card-header__link" href="#">Описание конкурса</a>
+                                    <span class="feedback-date">2024-08-10</span>
+                                </div>
+                            </div>
+                            <p class="feedback-slider__card-text">Текст отзыва 1...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="subscribe">
+            <div class="container">
+                <h2 class="section-title">Подписка на наши новости</h2>
+                <div class="subscribe__wrapper">
+                    <form class="subscribe__wrapper-subscriptionForm" action="" method="post">
+                        <div>
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="privacyPolicy" name="privacyPolicy" required>
+                            <label for="privacyPolicy">Я согласен на обработку персональных данных</label>
+                        </div>
+                        <button class="subscribe__wrapper-subscriptionForm-btn" type="submit">Подписаться</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section class="feedback-form">
+            <div class="container">
+                <h2 class="section-title">Обратная связь</h2>
+                <div class="subscribe__wrapper">
+                    <form class="subscribe__wrapper-subscriptionForm" action="" method="post">
+                        <div style="display: flex; flex-direction: column; align-items: flex-start;">
+                            <label for="name">Ваше имя</label>
+                            <input type="text" id="name" name="name" placeholder="Ваше имя" required>
+                            <label for="phone">Ваш телеон</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+7 (900) 000 00 00" required>
+                        </div>
+                        <div>
+                            <textarea name="message" id="message" style="max-width: 560px; width: 560px; height: 150px; resize: none;"></textarea>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="privacyPolicy" name="privacyPolicy" required>
+                            <label for="privacyPolicy">Я согласен на обработку персональных данных</label>
+                        </div>
+                        <button class="subscribe__wrapper-subscriptionForm-btn" type="submit">Подписаться</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-content__info">
+                    <p>Телефон:
+                        <a href="tel:+74842234567">+7 (4842) 23-45-67</a>
+                    </p>
+                    <p>Е-mail:
+                        <a href="mailto:family@cosmos.ru">family@cosmos.ru</a>
+                    </p>
+                </div>
+                <nav class="footer-content__navigation">
+                    <ul>
+                        <li>
+                            <a href="index.html">Главная</a>
+                        </li>
+                        <li>
+                            <a href="index-light.html">Главная-светлая</a>
+                        </li>
+                        <li>
+                            <a href="registration.html">Регистрация</a>
+                        </li>
+                        <li>
+                            <a href="competition.html">Конкурс</a>
+                        </li>
+                        <li>
+                            <a href="account.html">Личный кабинет</a>
+                        </li>
+                        <li>
+                            <a href="404.html">Страница не найдена</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
