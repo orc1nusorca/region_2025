@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добавление водяного знака</title>
+</head>
+<body>
+    <h1>Добавление водяного знака на изображение</h1>
+    <form id="watermarkForm">
+        <label for="fileimage">Выберите изображение:</label>
+        <input type="file" id="fileimage" name="fileimage" accept="image/*" required><br><br>
+        
+        <label for="message">Сообщение (10-20 символов):</label>
+        <input type="text" id="message" name="message" required minlength="10" maxlength="20"><br><br>
+        
+        <button type="submit">Добавить водяной знак</button>
+    </form>
+
+    <script>
+        document.getElementById('watermarkForm').addEventListener('submit', async function(event) {
+            event.preventDefault(); // Предотвращаем перезагрузку страницы
+
+            const formData = new FormData(this);
+            const response = await fetch('http://127.0.0.1:8000/lunar-watermark/', {
+                method: 'POST',
+                body: formData
+            });
+
+            if (response.ok) {
+                const blob = await response.blob();
+                const url = window.URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'watermarked_image.png';
+                document.body.appendChild(a);
+                a.click();
+                a.remove();
+            } else {
+                const errorData = await response.json();
+                alert('Ошибка: ' + errorData.error);
+            }
+        });
+    </script>
+</body>
+</html>
